@@ -1,0 +1,18 @@
+<header class="header">
+  <div>
+    <div>
+      <img src="assets/logo.png" class="header__logo">
+    </div>
+  </div>
+  <div>
+    <div class="header__right">
+        <span *ngIf="user; else elseBlock">
+            <app-avatar [user]="user"></app-avatar>
+            <a href="javascript:void(0);" (click)="logout()">Sign Out</a>
+        </span>
+        <ng-template #elseBlock>
+            <a href="/search">Sign In</a>
+        </ng-template>
+    </div>
+  </div>
+</header>

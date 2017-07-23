@@ -1,0 +1,25 @@
+<div class="panel panel-info">
+    <div class="panel-heading">Repo Details - {{repo.name}}</div>
+    <div class="panel-body">
+        <div class="description">{{repo.description}}
+            <a [href]="repo.homepage">{{repo.homepage}}</a>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge">{{repo.stargazers_count}}</span>
+                Starts
+            </li>
+            <li class="list-group-item">
+                <span class="badge">{{repo.forks}}</span>
+                Forks
+            </li>
+            <li class="list-group-item">
+                <span class="badge">{{repo.open_issues}}</span>
+                Open issues
+            </li>
+            <li class="list-group-item">
+                Last push <span class="pull-right">{{repo.pushed_at | date:'medium'}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

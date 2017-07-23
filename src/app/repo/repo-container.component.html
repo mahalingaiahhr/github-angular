@@ -1,0 +1,17 @@
+<div class="panel with-nav-tabs">
+    <div class="panel-heading">
+            <ul class="nav nav-tabs">
+                <li role="presentation" [routerLinkActive]="['active']">
+                    <a routerLink="details">Details</a>
+                </li>
+                <li role="presentation" [routerLinkActive]="['active']">
+                    <a routerLink="issues">Issues</a>
+                </li>
+            </ul>
+    </div>
+    <div class="panel-body">
+        <div class="tab-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

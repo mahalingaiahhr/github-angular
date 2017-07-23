@@ -1,0 +1,15 @@
+
+<h1>Search Github User or Organization</h1>
+<form #searchForm="ngForm" (ngSubmit)="submit()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="Search eg. angular" required [(ngModel)]="query" name="name" #name="ngModel"/>
+    </div>
+    <div [hidden]="!message.message">
+        <div class="alert alert-{{message.type}}" role="alert">
+          <strong>Oh No!</strong> {{message.message}}
+        </div>
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="!searchForm.form.valid">Search</button>
+</form>
+

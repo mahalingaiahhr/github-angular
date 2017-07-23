@@ -1,0 +1,10 @@
+<div class="repos-container">
+    <div>
+        <span>List of repositories for user</span>
+    <ul>
+        <li *ngFor="let repo of repos" class="repo">
+            <a href="/repo/{{repo.id}}">{{repo.name}}</a>
+        </li>
+    </ul>
+    </div>
+</div>

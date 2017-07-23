@@ -1,0 +1,22 @@
+<div class="panel panel-info">
+  <div class="panel-heading">Issues for {{repo.name}}</div>
+  <div class="panel-body">
+    <div *ngIf="issues && issues.length; else elseBlock">
+    <div class="media" *ngFor="let issue of issues" class="issue">
+        <div class="media-left">
+            <app-avatar [user]="issue.user"></app-avatar>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                <a [href]="issue.html_url" target="_blank">{{issue.title}}</a>
+            </h4>
+            <div>Status: {{issue.state}}. Created On: {{issue.created_at | date}}</div>
+            <div>{{issue.body | ellipsis:150}}</div>
+        </div>
+    </div>
+    </div>
+    <ng-template #elseBlock>
+        Cool! There are no issues opened for this repository
+    </ng-template>
+  </div>
+</div>
